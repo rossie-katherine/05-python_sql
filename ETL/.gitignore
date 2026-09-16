@@ -1,0 +1,22 @@
+# É o que vai ter em projeto de ETL de produção 
+# Aqui é o vai ser ocultado 
+# ____________________________________
+
+# Ambiente virtual Python (nomes que possam ser criados
+# no ambiente virtual python)
+
+.venv/
+venv/
+env/
+
+# Variáveis e credenciais
+
+.env
+
+# Arquivos cache Python 
+# Sempre que executamos python ele já cria arquivos menores
+# que facilitam a execução do código, mas não são necessários 
+# para o projeto
+
+pycache/
+__pycache__/
