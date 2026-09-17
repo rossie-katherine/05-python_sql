@@ -1,5 +1,5 @@
 import pandas as pd
-from config import engine_erp, engine_dw
+from config import erp_engine, dw_engine
 
 
 
@@ -34,11 +34,11 @@ INNER JOIN cadastro.marcas m
 
 def extrair_erp():
     print("Extraindo dados do banco de dados Loja Brasil")
-    df_vendas = pd.read_sql(sql_vendas, engine_erp)
+    df_vendas = pd.read_sql(sql_vendas, erp_engine)
     
     df_vendas.to_sql(
         "erp_vendas",
-        engine_dw,
+        dw_engine,
         schema="bronze",
         if_exists="replace",
         index=False
